@@ -1,1 +1,6 @@
 /* add your CSS here */
+
+.gallery img {
+        width: 400px;
+        height: auto;
+}
