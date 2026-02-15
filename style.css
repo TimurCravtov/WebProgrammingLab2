@@ -8,37 +8,73 @@ body {
     font-size: 1rem;
     padding: 1rem;
     line-height: 1.5;
-    background-color: #fcfcfc;
+    background-color: #634e39;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 12.5rem;
-    background: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
-    text-align: center;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 40vh;
+  max-width: 60rem;
+  text-align: left;
+  margin-bottom: 4rem;
+  padding: 4rem 4rem;
+  position: relative;
 }
 
 .name {
-    font-size: 4.375rem;
-    margin-bottom: 0.625rem; 
-    font-family: "Great Vibes", cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1rem; 
+    font-family: "Zain", sans-serif;
     font-weight: 400;
-    color: #02a980;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    border-bottom: 3px solid #1a1a1a;
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #02a980;
-    color: white;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s;
-    margin-bottom: 2rem;
+.title {
+    font-size: 0.95rem; 
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: 300;
+    color: #000000;
+    text-align: left;
+    font-family: "Zain", sans-serif;
+    line-height: 1.8;
+    max-width: 50rem;
+    letter-spacing: 0.02em;
+}
+
+.subtitle {
+    font-size: 0.95rem; 
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: #000000;
+    text-align: left;
+    font-family: "Zain", sans-serif;
+    line-height: 1.8;
+    max-width: 50rem;
+    letter-spacing: 0.02em;
+}
+
+.cta-text {
+   font-size: 0.95rem; 
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: #000000;
+    text-align: left;
+    font-family: "Zain", sans-serif;
+    line-height: 1.8;
+    max-width: 50rem;
+    letter-spacing: 0.02em;
 }
 
 .cta-button:hover {
@@ -64,12 +100,36 @@ body {
     align-items: center;
 }
 
+.painting-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.painting-title-container {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    font-style: italic;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
 .painting-title {
-    font-size: 1.3rem; 
+    font-size: 1rem; 
     margin-bottom: 0.5rem; 
-    font-weight: 700;
-    color: #02a980;
+    font-weight: 400;
+    color: black;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 .painting-image {
@@ -77,18 +137,34 @@ body {
     max-width: 20rem;
     height: 25rem;
     object-fit: cover;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 5px;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-color: #4e494f;
+    border-width: 10px;
+    border-style: solid;
+    box-shadow: 
+        0 8px 20px rgba(0,0,0,0.1),
+        0 0 60px 30px rgba(255,255,255,0.3),
+        0 0 100px 50px rgba(255,255,255,0.1);
+}
+
+.qr-code {
+    width: 10rem;
+    height: 5rem;
+    object-fit: contain;
 }
 
 .review {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     padding: 1.25rem;
     max-width: 30rem;
     width: 90%;
-    margin: 2rem 0;
-    border-radius: 0.625rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-style: italic;
 }
 
 .contact {
