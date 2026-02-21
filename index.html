@@ -1,88 +1,134 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My landing page</title>
-    <!-- CHANGE THESE VALUES -->
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My landing page</title>
+  <!-- CHANGE THESE VALUES -->
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="side-nav">
+    <a href="#hero" title="Home">Home</a>
+    <a href="#instagram" title="Instagram">Instagram</a>
+    <a href="#gallery" title="Gallery">Gallery</a>
+    <a href="#reviews" title="Reviews">Reviews</a>
+    <a href="#contact" title="Contact">Contact</a>
+  </div>
+
+  <div id="hero" class="header-card">
     <div class="hero">
-        <p class="name">Evelina</p>
-        <p class="title">The Authentic Artist from Moldova</p>
-        <p class="subtitle">Evelina is a passionate artist who brings her unique vision to every canvas. She captures the essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional artistry. Her main instruments are oil, watercolor, and acrylics.</p>
+      <p class="name">Evelina</p>
+      <p class="title">The Authentic Artist from Moldova</p>
+      <p class="subtitle">Evelina is a passionate artist who brings her unique vision to every canvas. She captures the
+        essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional
+        artistry. Her main instruments are oil, watercolor, and acrylics.</p>
     </div>
- 
-    <div class="call-to-action">
-      <img src="assets/contact-qr/instagram.png" alt="Instagram QR code" class="qr-code">
-      <a href="https://www.instagram.com/eveline.art/" class="cta-text">Follow Evelina on Instagram</a>
+  </div>
+
+  <div id="instagram" class="call-to-action-card">
+    <img src="assets/contact-qr/instagram.png" alt="Instagram QR code" class="qr-code">
+    <a href="https://www.instagram.com/eveline.art/" class="cta-button">Follow Evelina on Instagram</a>
+  </div>
+
+  <div id="gallery" class="gallery">
+    <div class="section-header">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-subtitle">A Spotlight on Evelina's Works</p>
     </div>
 
-    <div class="gallery">
+    <div class="museum-wall">
 
-      
-      <div class="painting-galery">
-
-        <div>
-          <div class="painting-title-container">
-            <p class="painting-title">Flow of the Life</p>
-          </div>
+      <div class="artwork">
+        <div class="spotlight"></div>
+        <div class="frame">
           <img src="assets/flow.png" alt="flow of the life" class="painting-image">
         </div>
+        <div class="plaque">
+          <p class="plaque-title">Flow of the Life</p>
+          <p class="plaque-medium">Oil on canvas</p>
+        </div>
+      </div>
 
-        <div>
-          <div class="painting-title-container">
-            <p class="painting-title">Mountain Landscape of Brașov</p>
-          </div>
+      <div class="artwork">
+        <div class="spotlight"></div>
+        <div class="frame">
           <img src="assets/mountain.png" alt="mountain landscape of Brasov" class="painting-image">
         </div>
+        <div class="plaque">
+          <p class="plaque-title">Mountain Landscape of Brașov</p>
+          <p class="plaque-medium">Watercolor</p>
+        </div>
+      </div>
 
-        <div>
-          <div class="painting-title-container">
-            <p class="painting-title">Evening in the Garden</p>
-          </div>
+      <div class="artwork">
+        <div class="spotlight"></div>
+        <div class="frame">
           <img src="assets/garden.png" alt="evening in the garden" class="painting-image">
         </div>
+        <div class="plaque">
+          <p class="plaque-title">Evening in the Garden</p>
+          <p class="plaque-medium">Acrylic on canvas</p>
+        </div>
+      </div>
 
-        <div>
-          <div class="painting-title-container">
-            <p class="painting-title">Kitten</p>
-          </div>
+      <div class="artwork">
+        <div class="spotlight"></div>
+        <div class="frame">
           <img src="assets/kitten.png" alt="kitten" class="painting-image">
         </div>
+        <div class="plaque">
+          <p class="plaque-title">Kitten</p>
+          <p class="plaque-medium">Oil on canvas</p>
+        </div>
+      </div>
 
-        <div>
-          <div class="painting-title-container">
-            <p class="painting-title">Inside the Silence</p>
-          </div>
+      <div class="artwork">
+        <div class="spotlight"></div>
+        <div class="frame">
           <img src="assets/silence.png" alt="inside the silence" class="painting-image">
         </div>
-
-      </div>
-    </div>
-    
-    <div class="reviews">
-      <div class="review">
-        <p class="review-text">"Evelina's art is truly captivating. Her use of color and texture creates a mesmerizing experience that transports you to another world."</p>
-        <p class="review-author">- John Popescu</p>
-      </div>
-    </div>
-
-    <div class="contact">
-      <p class="contact-me">Contact me at</p>
-
-      <div class="social-links">
-
-        <div class="social-link">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png" alt="Instagram">
-            <a href="https://www.instagram.com/eveline.art/">Instagram</a>
+        <div class="plaque">
+          <p class="plaque-title">Inside the Silence</p>
+          <p class="plaque-medium">Watercolor</p>
         </div>
       </div>
 
     </div>
+  </div>
 
-  </body>
+  <div id="reviews" class="reviews">
+    <div class="section-header">
+      <h2 class="section-title">Reviews</h2>
+    </div>
+    <div class="review">
+      <p class="review-text">"Evelina's art is truly captivating. Her use of color and texture creates a mesmerizing
+        experience that transports you to another world."</p>
+      <p class="review-author">- John Popescu</p>
+    </div>
+  </div>
+
+  <div id="contact" class="contact">
+    <div class="section-header">
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="contact-card">
+      <p class="contact-me">For collaborations or inquiries, feel free to reach out:</p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/eveline.art/" class="social-button">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png"
+            alt="Instagram" class="social-icon">
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+
+</body>
+
 </html>
