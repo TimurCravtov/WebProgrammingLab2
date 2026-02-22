@@ -10,6 +10,15 @@ The landing page is avaliable [here](https://timurcravtov.github.io/WebProgrammi
 
 ## Demonstrations
 
-```bash
-# i will add screenshots later :3
-```
+The inspiration is taken from real museum [here](inspo.png)
+
+### Sections:
+
+#### Hero
+<img src="assets/demo/base.png" alt="Base" />
+
+#### Gallery
+<img src="assets/demo/gallery.png" alt="Gallery" />
+
+#### Reviews and Contacts
+<img src="assets/demo/reviews+contacts.png" alt="Reviews+Contacts" />
