@@ -289,7 +289,7 @@ body {
 .qr-code:hover {
     opacity: 1;
 }
-
+/* Reviews styling is now handled via Tailwind classes in HTML. The old rules are kept for reference.
 .review {
     background-color: #ffffff;
     padding: 2.5rem;
@@ -301,6 +301,7 @@ body {
     font-style: italic;
     text-align: center;
 }
+*/
 
 .contact-card {
     background-color: #ffffff;
