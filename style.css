@@ -46,6 +46,7 @@ body {
 .side-nav a:hover {
     filter: invert(1) opacity(1);
 }
+
 /* Now we use tailwind for hero*/
 /*
 .hero {
@@ -164,6 +165,7 @@ body {
     padding: 2rem 3rem;
     align-items: flex-start;
 }
+
 /* Artwork containers now sized responsively with Tailwind; legacy CSS is commented out.
 .artwork {
     display: flex;
@@ -291,6 +293,7 @@ body {
 .qr-code:hover {
     opacity: 1;
 }
+
 /* Reviews styling is now handled via Tailwind classes in HTML. The old rules are kept for reference.
 .review {
     background-color: #ffffff;
@@ -441,8 +444,13 @@ body {
 }
 
 @keyframes mascot-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .mascot:hover .mascot-img,
@@ -467,7 +475,7 @@ body {
     font-size: 0.9rem;
     text-align: left;
     max-width: 240px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
 }
 
 .mascot-info::after {
@@ -489,9 +497,38 @@ body {
     transform: translateY(0);
 }
 
-.mascot-bubble { font-family: "Zain", sans-serif; font-weight: 400; color: #1a1a1a; font-size: 0.95rem; }
+.mascot-bubble {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
 
 @media (max-width: 600px) {
-    .mascot { right: 0.75rem; bottom: 0.75rem; width: 72px; height: 72px; }
-    .mascot-info { right: 0; left: auto; max-width: 180px; }
+    .mascot {
+        right: 0.75rem;
+        bottom: 0.75rem;
+        width: 72px;
+        height: 72px;
+    }
+
+    .mascot-info {
+        right: 0;
+        left: auto;
+        max-width: 180px;
+    }
+}
+
+#liquid-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.hidden {
+    display: none;
 }

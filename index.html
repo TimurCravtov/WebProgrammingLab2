@@ -45,8 +45,10 @@
 
   <div id="hero" class="bg-white w-11/12 max-w-screen-lg mx-auto mt-14 rounded-lg shadow-lg px-4 sm:px-8">
     <div class="flex flex-col items-start justify-center text-left py-8">
-      <p class="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-widest border-b-4 border-black pb-2 mb-4">Evelina</p>
-      <p class="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 max-w-3xl leading-relaxed">The Authentic Artist from Moldova</p>
+      <p class="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-widest border-b-4 border-black pb-2 mb-4">
+        Evelina</p>
+      <p class="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 max-w-3xl leading-relaxed">The Authentic Artist from
+        Moldova</p>
       <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">
         Evelina is a passionate artist who brings her unique vision to every canvas. She captures the
         essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional
@@ -54,8 +56,9 @@
       </p>
     </div>
   </div>
-  
-  <a id="cta" href="https://www.instagram.com/eveline.art/" class="cta-trapezoid block w-11/12 max-w-xs mx-auto text-center sm:text-lg">
+
+  <a id="cta" href="https://www.instagram.com/eveline.art/"
+    class="cta-trapezoid block w-11/12 max-w-xs mx-auto text-center sm:text-lg">
     Order a painting or view more works
   </a>
 
@@ -157,12 +160,27 @@
 
       <div class="social-links">
         <a href="https://www.instagram.com/eveline.art/" class="social-button">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png" alt="Instagram" class="social-icon">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png"
+            alt="Instagram" class="social-icon">
           <span>Instagram</span>
         </a>
       </div>
     </div>
   </div>
+
+  <!-- Liquid Effect Foundation -->
+  <canvas id="liquid-canvas"></canvas>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hidden">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+  <script src="liquid-effect.js"></script>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -181,9 +199,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-    
 
-    const mascot = document.getElementById('site-mascot');
+
+      const mascot = document.getElementById('site-mascot');
       const info = document.getElementById('mascot-info');
 
       function showInfo() { info.setAttribute('aria-hidden', 'false'); }
