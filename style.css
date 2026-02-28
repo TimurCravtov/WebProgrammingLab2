@@ -106,7 +106,7 @@ body {
     letter-spacing: 0.02em;
 }
 */
-
+/* Gallery and decorative styles are now managed via Tailwind utilities & HTML structure. Original rules commented out for reference.
 .gallery {
     margin: 3rem 0;
     padding: 3rem 0;
@@ -128,6 +128,7 @@ body {
             rgba(0, 0, 0, 0.08) 90%,
             transparent 95%);
 }
+*/
 
 .section-header {
     text-align: left;
@@ -163,7 +164,7 @@ body {
     padding: 2rem 3rem;
     align-items: flex-start;
 }
-
+/* Artwork containers now sized responsively with Tailwind; legacy CSS is commented out.
 .artwork {
     display: flex;
     flex-direction: column;
@@ -172,6 +173,7 @@ body {
     flex: 0 1 280px;
     max-width: 320px;
 }
+*/
 
 .frame {
     background: #2c2420;
@@ -302,7 +304,7 @@ body {
     text-align: center;
 }
 */
-
+/* Contact-card styling partly replaced by Tailwind responsive classes in markup; original rules kept for reference.
 .contact-card {
     background-color: #ffffff;
     padding: 3rem;
@@ -317,6 +319,7 @@ body {
     gap: 2rem;
     text-align: center;
 }
+*/
 
 .contact-me {
     font-size: 1rem;

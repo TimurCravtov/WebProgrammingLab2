@@ -15,37 +15,38 @@
 
 <body>
 
-  <div class="side-nav">
-    <a href="#hero" title="Home">Home</a>
-    <a href="#cta" title="Instagram">Instagram</a>
-    <a href="#gallery" title="Gallery">Gallery</a>
-    <a href="#reviews" title="Reviews">Reviews</a>
-    <a href="#contact" title="Contact">Contact</a>
+  <div class="side-nav hidden sm:flex">
+    <a href="#hero" title="Home" class="text-sm sm:text-base">Home</a>
+    <a href="#cta" title="Instagram" class="text-sm sm:text-base">Instagram</a>
+    <a href="#gallery" title="Gallery" class="text-sm sm:text-base">Gallery</a>
+    <a href="#reviews" title="Reviews" class="text-sm sm:text-base">Reviews</a>
+    <a href="#contact" title="Contact" class="text-sm sm:text-base">Contact</a>
   </div>
 
-  <div id="hero" class="bg-white w-11/12 mx-auto mt-14 rounded-lg shadow-lg">
-    <div class="flex flex-col items-start justify-center text-left p-8">
-      <p class="text-5xl sm:text-6xl font-bold uppercase tracking-widest border-b-4 border-black pb-2 mb-4">Evelina</p>
-      <p class="text-lg text-gray-800 mb-6 max-w-3xl leading-relaxed">The Authentic Artist from Moldova</p>
-      <p class="text-base text-gray-600 max-w-3xl leading-relaxed">
+  <div id="hero" class="bg-white w-11/12 max-w-screen-lg mx-auto mt-14 rounded-lg shadow-lg px-4 sm:px-8">
+    <div class="flex flex-col items-start justify-center text-left py-8">
+      <p class="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-widest border-b-4 border-black pb-2 mb-4">Evelina</p>
+      <p class="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 max-w-3xl leading-relaxed">The Authentic Artist from Moldova</p>
+      <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">
         Evelina is a passionate artist who brings her unique vision to every canvas. She captures the
         essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional
         artistry. All her paintings are oil on canvas.
       </p>
     </div>
   </div>
-  <a id="cta" href="https://www.instagram.com/eveline.art/" class="cta-trapezoid">Order a painting or view more
-    works</a>
+  <a id="cta" href="https://www.instagram.com/eveline.art/" class="cta-trapezoid block w-11/12 max-w-xs mx-auto text-center sm:text-lg">
+    Order a painting or view more works
+  </a>
 
-  <div id="gallery" class="gallery">
+  <div id="gallery" class="py-12 px-4 sm:px-8">
     <div class="section-header">
-      <h2 class="section-title">Gallery</h2>
-      <p class="section-subtitle">A Spotlight on Evelina's Works</p>
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Gallery</h2>
+      <p class="section-subtitle text-sm sm:text-base">A Spotlight on Evelina's Works</p>
     </div>
 
-    <div class="museum-wall">
+    <div class="museum-wall flex flex-wrap justify-center gap-6 sm:gap-8">
 
-      <div class="artwork">
+      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div class="frame">
           <img src="assets/flow.png" alt="flow of the life" class="painting-image">
         </div>
@@ -55,7 +56,7 @@
         </div>
       </div>
 
-      <div class="artwork">
+      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div class="frame">
           <img src="assets/mountain.png" alt="mountain landscape of Brasov" class="painting-image">
         </div>
@@ -65,7 +66,7 @@
         </div>
       </div>
 
-      <div class="artwork">
+      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div class="frame">
           <img src="assets/garden.png" alt="evening in the garden" class="painting-image">
         </div>
@@ -75,7 +76,7 @@
         </div>
       </div>
 
-      <div class="artwork">
+      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div class="frame">
           <img src="assets/kitten.png" alt="kitten" class="painting-image">
         </div>
@@ -85,7 +86,7 @@
         </div>
       </div>
 
-      <div class="artwork">
+      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div class="frame">
           <img src="assets/silence.png" alt="inside the silence" class="painting-image">
         </div>
@@ -98,9 +99,9 @@
     </div>
   </div>
 
-  <div id="reviews" class="py-12">
+  <div id="reviews" class="py-12 px-4 sm:px-8">
     <div class="section-header">
-      <h2 class="section-title">Reviews</h2>
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Reviews</h2>
     </div>
 
     <div class="bg-white p-6 max-w-xl w-11/12 mx-auto my-12 rounded-lg shadow-lg italic text-center">
@@ -128,11 +129,11 @@
     </div>
   </div>
 
-  <div id="contact" class="contact">
+  <div id="contact" class="contact py-12 px-4 sm:px-8">
     <div class="section-header">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Contact</h2>
     </div>
-    <div class="contact-card">
+    <div class="contact-card max-w-xl w-11/12 mx-auto">
       <p class="contact-me">For collaborations or inquiries, feel free to reach out:</p>
 
       <div class="social-links">
