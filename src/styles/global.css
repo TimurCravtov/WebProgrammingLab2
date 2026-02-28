@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom base styles */
+@layer base {
+  body {
+    @apply font-zain font-light text-base leading-relaxed bg-[#634e39] p-4;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* custom component styles */
+@layer components {
+  .cta-trapezoid {
+    @apply inline-block relative bg-[#1a1a1a] text-white no-underline text-xs sm:text-lg font-normal tracking-widest uppercase transition-colors duration-300 px-10 py-4;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  }
+  .cta-trapezoid:hover {
+    @apply bg-white text-[#1a1a1a];
+  }
+  .museum-frame {
+    @apply bg-[#2c2420] p-3 relative z-10 flex justify-center w-fit mx-auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px #3d3530, inset 0 0 0 4px #1a1512;
+  }
+  .museum-frame::before {
+    content: '';
+    @apply absolute inset-[6px] border border-white/10 pointer-events-none;
+  }
+}

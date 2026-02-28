@@ -1,0 +1,31 @@
+{
+  "name": "2",
+  "version": "1.0.0",
+  "description": "Evelina is a Moldova painter who specializes on oil painting. She has more than 6 years of experience of painting.",
+  "main": "liquid-effect.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimurCravtov/tum-web-lab2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimurCravtov/tum-web-lab2/issues"
+  },
+  "homepage": "https://github.com/TimurCravtov/tum-web-lab2#readme",
+  "dependencies": {
+    "astro": "^5.18.0"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "6.0.2",
+    "autoprefixer": "10.4.27",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.19"
+  }
+}
