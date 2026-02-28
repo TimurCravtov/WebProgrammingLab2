@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="pt-12 sm:pt-0">
+
+  <header class="fixed top-0 left-0 right-0 bg-black border-b shadow md:hidden z-50">
+    <nav class="flex justify-around items-center p-4 text-white">
+      <a href="#hero" aria-label="Home" class="flex items-center justify-center">
+        <i data-lucide="home" class="w-6 h-6"></i>
+      </a>
+      <a href="#cta" aria-label="Instagram" class="flex items-center justify-center">
+        <i data-lucide="instagram" class="w-6 h-6"></i>
+      </a>
+      <a href="#gallery" aria-label="Gallery" class="flex items-center justify-center">
+        <i data-lucide="image" class="w-6 h-6"></i>
+      </a>
+      <a href="#reviews" aria-label="Reviews" class="flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+      </a>
+      <a href="#contact" aria-label="Contact" class="flex items-center justify-center">
+        <i data-lucide="mail" class="w-6 h-6"></i>
+      </a>
+    </nav>
+  </header>
 
   <div class="side-nav hidden sm:flex">
     <a href="#hero" title="Home" class="text-sm sm:text-base">Home</a>
@@ -34,6 +54,7 @@
       </p>
     </div>
   </div>
+  
   <a id="cta" href="https://www.instagram.com/eveline.art/" class="cta-trapezoid block w-11/12 max-w-xs mx-auto text-center sm:text-lg">
     Order a painting or view more works
   </a>
@@ -45,7 +66,6 @@
     </div>
 
     <div class="museum-wall flex flex-wrap justify-center gap-6 sm:gap-8">
-
       <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div class="frame">
           <img src="assets/flow.png" alt="flow of the life" class="painting-image">
@@ -62,7 +82,7 @@
         </div>
         <div class="plaque">
           <p class="plaque-title">Mountain Landscape of Brașov</p>
-          <p class="plaque-medium">Watercolor</p>
+          <p class="plaque-medium">Oil on canvas</p>
         </div>
       </div>
 
@@ -72,7 +92,7 @@
         </div>
         <div class="plaque">
           <p class="plaque-title">Evening in the Garden</p>
-          <p class="plaque-medium">Acrylic on canvas</p>
+          <p class="plaque-medium">Oil on canvas</p>
         </div>
       </div>
 
@@ -92,10 +112,9 @@
         </div>
         <div class="plaque">
           <p class="plaque-title">Inside the Silence</p>
-          <p class="plaque-medium">Watercolor</p>
+          <p class="plaque-medium">Oil on canvas</p>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -138,14 +157,19 @@
 
       <div class="social-links">
         <a href="https://www.instagram.com/eveline.art/" class="social-button">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png"
-            alt="Instagram" class="social-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png" alt="Instagram" class="social-icon">
           <span>Instagram</span>
         </a>
       </div>
     </div>
+  </div>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
 </body>
 
 </html>

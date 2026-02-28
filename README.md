@@ -6,7 +6,7 @@ Evelina is a Moldova painers who specializes on oil paiting. She has more than 6
 
 ## Access
 
-The landing page is avaliable [here](https://timurcravtov.github.io/WebProgrammingLab2/)
+The landing page is avaliable [here permanently](https://timurcravtov.github.io/WebProgrammingLab2/) and [here, with custom domain](https://evelinastudio.site)
 
 ## Demonstrations
 
