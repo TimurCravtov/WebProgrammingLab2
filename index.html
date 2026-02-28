@@ -196,28 +196,7 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-      const mascot = document.getElementById('site-mascot');
-      const info = document.getElementById('mascot-info');
-
-      function showInfo() { info.setAttribute('aria-hidden', 'false'); }
-      function hideInfo() { info.setAttribute('aria-hidden', 'true'); }
-
-      mascot.addEventListener('mouseenter', showInfo);
-      mascot.addEventListener('focus', showInfo);
-      mascot.addEventListener('mouseleave', hideInfo);
-      mascot.addEventListener('blur', hideInfo);
-
-      mascot.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          if (info.getAttribute('aria-hidden') === 'true') showInfo(); else hideInfo();
-        }
-      });
-    });
-  </script>
+  <script src="mascot.js"></script>
 </body>
 
 </html>
