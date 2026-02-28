@@ -7,10 +7,59 @@
   <title>Evelina :: the Artist</title>
 
   <link rel="icon" type="image/x-icon" href="assets/logo/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+    rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            zain: ['Zain', 'sans-serif'],
+          },
+          animation: {
+            'mascot-spin': 'mascot-spin 6s linear infinite',
+          },
+          keyframes: {
+            'mascot-spin': {
+              'from': { transform: 'rotate(0deg)' },
+              'to': { transform: 'rotate(360deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply font-zain font-light text-base leading-relaxed bg-[#634e39] p-4;
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+    }
+    @layer components {
+      .cta-trapezoid {
+        @apply inline-block relative bg-[#1a1a1a] text-white no-underline text-xs sm:text-lg font-normal tracking-widest uppercase transition-colors duration-300 px-10 py-4;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+      }
+      .cta-trapezoid:hover {
+        @apply bg-white text-[#1a1a1a];
+      }
+      .museum-frame {
+        @apply bg-[#2c2420] p-3 relative z-10 flex justify-center w-fit mx-auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px #3d3530, inset 0 0 0 4px #1a1512;
+      }
+      .museum-frame::before {
+        content: '';
+        @apply absolute inset-[6px] border border-white/10 pointer-events-none;
+      }
+    }
+  </style>
 </head>
 
 <body class="pt-12 sm:pt-0">
@@ -35,21 +84,29 @@
     </nav>
   </header>
 
-  <div class="side-nav hidden sm:flex">
-    <a href="#hero" title="Home" class="text-sm sm:text-base">Home</a>
-    <a href="#cta" title="Instagram" class="text-sm sm:text-base">Instagram</a>
-    <a href="#gallery" title="Gallery" class="text-sm sm:text-base">Gallery</a>
-    <a href="#reviews" title="Reviews" class="text-sm sm:text-base">Reviews</a>
-    <a href="#contact" title="Contact" class="text-sm sm:text-base">Contact</a>
-  </div>
+  <nav
+    class="fixed top-8 right-8 hidden sm:flex flex-col items-center gap-6 p-6 z-[1000] bg-[#2c2420]/85 backdrop-blur-md border border-white/10 rounded-lg shadow-2xl">
+    <a href="#hero" title="Home"
+      class="relative flex items-center transition-all duration-300 invert opacity-70 hover:opacity-100 no-underline text-sm sm:text-base font-zain">Home</a>
+    <a href="#cta" title="Instagram"
+      class="relative flex items-center transition-all duration-300 invert opacity-70 hover:opacity-100 no-underline text-sm sm:text-base font-zain">Instagram</a>
+    <a href="#gallery" title="Gallery"
+      class="relative flex items-center transition-all duration-300 invert opacity-70 hover:opacity-100 no-underline text-sm sm:text-base font-zain">Gallery</a>
+    <a href="#reviews" title="Reviews"
+      class="relative flex items-center transition-all duration-300 invert opacity-70 hover:opacity-100 no-underline text-sm sm:text-base font-zain">Reviews</a>
+    <a href="#contact" title="Contact"
+      class="relative flex items-center transition-all duration-300 invert opacity-70 hover:opacity-100 no-underline text-sm sm:text-base font-zain">Contact</a>
+  </nav>
 
   <div id="hero" class="bg-white w-11/12 max-w-screen-lg mx-auto mt-14 rounded-lg shadow-lg px-4 sm:px-8">
     <div class="flex flex-col items-start justify-center text-left py-8">
-      <p class="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-widest border-b-4 border-black pb-2 mb-4">
+      <p
+        class="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-widest border-b-4 border-black pb-2 mb-4 font-zain">
         Evelina</p>
-      <p class="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 max-w-3xl leading-relaxed">The Authentic Artist from
-        Moldova</p>
-      <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">
+      <p
+        class="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 max-w-3xl font-light font-zain leading-relaxed text-left">
+        The Authentic Artist from Moldova</p>
+      <p class="text-sm sm:text-base text-gray-600 max-w-3xl font-light font-zain leading-relaxed">
         Evelina is a passionate artist who brings her unique vision to every canvas. She captures the
         essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional
         artistry. All her paintings are oil on canvas.
@@ -63,67 +120,82 @@
   </a>
 
   <div id="gallery" class="py-12 px-4 sm:px-8">
-    <div class="section-header">
-      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Gallery</h2>
-      <p class="section-subtitle text-sm sm:text-base">A Spotlight on Evelina's Works</p>
+    <div class="text-left px-4 sm:px-16 mb-12">
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-[0.15em] uppercase mb-2 leading-tight font-zain">
+        Gallery</h2>
+      <p class="text-sm sm:text-base font-light text-[#b8a898] uppercase tracking-wider font-zain">A Spotlight on
+        Evelina's Works</p>
     </div>
 
-    <div class="museum-wall flex flex-wrap justify-center gap-6 sm:gap-8">
-      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="frame">
-          <img src="assets/flow.png" alt="flow of the life" class="painting-image">
+    <div class="flex flex-wrap justify-center gap-12 px-4 sm:px-12 items-start">
+      <div class="flex flex-col items-center relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div class="museum-frame">
+          <img src="assets/flow.png" alt="flow of the life"
+            class="block w-full max-w-[260px] h-80 object-cover border-4 border-[#f5f0e8]">
         </div>
-        <div class="plaque">
-          <p class="plaque-title">Flow of the Life</p>
-          <p class="plaque-medium">Oil on canvas</p>
-        </div>
-      </div>
-
-      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="frame">
-          <img src="assets/mountain.png" alt="mountain landscape of Brasov" class="painting-image">
-        </div>
-        <div class="plaque">
-          <p class="plaque-title">Mountain Landscape of Brașov</p>
-          <p class="plaque-medium">Oil on canvas</p>
+        <div
+          class="mt-5 bg-gradient-to-br from-[#f8f4ec] to-[#ece5d8] border border-[#c8bfb0] px-5 py-2 text-center shadow-md min-w-[140px]">
+          <p class="font-zain text-sm font-normal text-[#2a2a2a] italic tracking-tight">Flow of the Life</p>
+          <p class="font-zain text-[0.7rem] font-light text-gray-500 mt-0.5 tracking-tight">Oil on canvas</p>
         </div>
       </div>
 
-      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="frame">
-          <img src="assets/garden.png" alt="evening in the garden" class="painting-image">
+      <div class="flex flex-col items-center relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div class="museum-frame">
+          <img src="assets/mountain.png" alt="mountain landscape of Brasov"
+            class="block w-full max-w-[260px] h-80 object-cover border-4 border-[#f5f0e8]">
         </div>
-        <div class="plaque">
-          <p class="plaque-title">Evening in the Garden</p>
-          <p class="plaque-medium">Oil on canvas</p>
-        </div>
-      </div>
-
-      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="frame">
-          <img src="assets/kitten.png" alt="kitten" class="painting-image">
-        </div>
-        <div class="plaque">
-          <p class="plaque-title">Kitten</p>
-          <p class="plaque-medium">Oil on canvas</p>
+        <div
+          class="mt-5 bg-gradient-to-br from-[#f8f4ec] to-[#ece5d8] border border-[#c8bfb0] px-5 py-2 text-center shadow-md min-w-[140px]">
+          <p class="font-zain text-sm font-normal text-[#2a2a2a] italic tracking-tight">Mountain Landscape of Brașov</p>
+          <p class="font-zain text-[0.7rem] font-light text-gray-500 mt-0.5 tracking-tight">Oil on canvas</p>
         </div>
       </div>
 
-      <div class="artwork w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="frame">
-          <img src="assets/silence.png" alt="inside the silence" class="painting-image">
+      <div class="flex flex-col items-center relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div class="museum-frame">
+          <img src="assets/garden.png" alt="evening in the garden"
+            class="block w-full max-w-[260px] h-80 object-cover border-4 border-[#f5f0e8]">
         </div>
-        <div class="plaque">
-          <p class="plaque-title">Inside the Silence</p>
-          <p class="plaque-medium">Oil on canvas</p>
+        <div
+          class="mt-5 bg-gradient-to-br from-[#f8f4ec] to-[#ece5d8] border border-[#c8bfb0] px-5 py-2 text-center shadow-md min-w-[140px]">
+          <p class="font-zain text-sm font-normal text-[#2a2a2a] italic tracking-tight">Evening in the Garden</p>
+          <p class="font-zain text-[0.7rem] font-light text-gray-500 mt-0.5 tracking-tight">Oil on canvas</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div class="museum-frame">
+          <img src="assets/kitten.png" alt="kitten"
+            class="block w-full max-w-[260px] h-80 object-cover border-4 border-[#f5f0e8]">
+        </div>
+        <div
+          class="mt-5 bg-gradient-to-br from-[#f8f4ec] to-[#ece5d8] border border-[#c8bfb0] px-5 py-2 text-center shadow-md min-w-[140px]">
+          <p class="font-zain text-sm font-normal text-[#2a2a2a] italic tracking-tight">Kitten</p>
+          <p class="font-zain text-[0.7rem] font-light text-gray-500 mt-0.5 tracking-tight">Oil on canvas</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div class="museum-frame">
+          <img src="assets/silence.png" alt="inside the silence"
+            class="block w-full max-w-[260px] h-80 object-cover border-4 border-[#f5f0e8]">
+        </div>
+        <div
+          class="mt-5 bg-gradient-to-br from-[#f8f4ec] to-[#ece5d8] border border-[#c8bfb0] px-5 py-2 text-center shadow-md min-w-[140px]">
+          <p class="font-zain text-sm font-normal text-[#2a2a2a] italic tracking-tight">Inside the Silence</p>
+          <p class="font-zain text-[0.7rem] font-light text-gray-500 mt-0.5 tracking-tight">Oil on canvas</p>
         </div>
       </div>
     </div>
   </div>
 
   <div id="reviews" class="py-12 px-4 sm:px-8">
-    <div class="section-header">
-      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Reviews</h2>
+    <div class="text-left px-4 sm:px-16 mb-8">
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-[0.15em] uppercase mb-2 leading-tight font-zain">
+        Reviews</h2>
     </div>
 
     <div class="bg-white p-6 max-w-xl w-11/12 mx-auto my-12 rounded-lg shadow-lg italic text-center">
@@ -151,18 +223,22 @@
     </div>
   </div>
 
-  <div id="contact" class="contact py-12 px-4 sm:px-8">
-    <div class="section-header">
-      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Contact</h2>
+  <div id="contact" class="py-12 px-4 sm:px-8">
+    <div class="text-left px-4 sm:px-16 mb-8">
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-[0.15em] uppercase mb-2 leading-tight font-zain">
+        Contact</h2>
     </div>
-    <div class="bg-white p-8 max-w-xl w-11/12 mx-auto my-12 rounded-lg shadow-lg text-center">
-      <p class="contact-me">For collaborations or inquiries, feel free to reach out:</p>
+    <div class="bg-white p-8 max-w-xl w-11/12 mx-auto my-12 rounded-lg shadow-lg text-center font-zain">
+      <p class="text-base text-gray-500 mb-2 tracking-wider">For collaborations or inquiries, feel free to reach out:
+      </p>
 
-      <div class="social-links">
-        <a href="https://www.instagram.com/eveline.art/" class="social-button">
+      <div class="flex justify-center gap-10 mt-6">
+        <a href="https://www.instagram.com/eveline.art/"
+          class="bg-[#1a1a1a] text-white px-7 py-2.5 border border-[#1a1a1a] rounded-sm no-underline font-normal text-[0.85rem] tracking-widest uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white hover:text-[#1a1a1a] group">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png"
-            alt="Instagram" class="social-icon">
+            alt="Instagram" class="w-4 h-4 invert group-hover:invert-0 transition-opacity duration-300">
           <span>Instagram</span>
         </a>
       </div>
@@ -170,7 +246,7 @@
   </div>
 
   <!-- Liquid Effect Foundation -->
-  <canvas id="liquid-canvas"></canvas>
+  <canvas id="liquid-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-[9998]"></canvas>
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hidden">
     <defs>
       <filter id="goo">
@@ -189,10 +265,17 @@
     });
   </script>
   <!-- Mascot: bottom-right, rotates, stops on hover/focus and shows a text bubble -->
-  <div class="mascot" id="site-mascot" aria-label="Site mascot" role="img" tabindex="0">
-    <img src="assets/logo/mascot.png" alt="mascot" class="mascot-img">
-    <div class="mascot-info" id="mascot-info" aria-hidden="true">
-      <div class="mascot-bubble">Hi! You are curious one? :)</div>
+  <div
+    class="fixed right-5 bottom-5 w-[88px] h-[88px] z-[9999] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500 mascot group/mascot"
+    id="site-mascot" aria-label="Site mascot" role="img" tabindex="0">
+    <img src="assets/logo/mascot.png" alt="mascot"
+      class="w-full h-full object-contain rounded-full animate-mascot-spin group-hover/mascot:pause group-focus/mascot:pause group-hover/mascot:rotate-0 group-hover/mascot:scale-[1.02] group-focus/mascot:rotate-0 group-focus/mascot:scale-[1.02] transition-transform duration-[0.18s] cursor-pointer">
+    <div
+      class="absolute right-0 bottom-[calc(100%+12px)] translate-y-[6px] opacity-0 pointer-events-none transition-all duration-[0.18s] bg-white text-[#1a1a1a] px-[10px] py-2 rounded-xl text-[0.9rem] text-left max-w-[240px] shadow-[0_8px_28px_rgba(0,0,0,0.18)] aria-false:hidden aria-[aria-hidden=false]:opacity-100 aria-[aria-hidden=false]:pointer-events-auto aria-[aria-hidden=false]:translate-y-0"
+      id="mascot-info" aria-hidden="true">
+      <div class="font-zain font-normal text-[#1a1a1a] text-[0.95rem]">Hi! You are curious one? :)</div>
+      <div class="absolute right-[18px] top-full w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-white">
+      </div>
     </div>
   </div>
 
