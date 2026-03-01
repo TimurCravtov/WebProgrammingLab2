@@ -36,3 +36,31 @@ The inspiration is taken from real museum [here](inspo.png)
 #### Mobile view
 
 <img src="assets/demo/mobile-view.png" alt="Mobile" />
+
+### Running and building
+
+#### Prerequisites
+- Node.js 18+
+- npm
+
+#### Install dependencies
+```bash
+npm install
+```
+
+#### Development (with TinaCMS)
+```bash
+npm run dev
+```
+This starts the TinaCMS local server + Astro dev server. Edit content at `http://localhost:4321/admin/index.html`.
+
+#### Build for production
+```bash
+npm run build
+```
+Runs `tinacms build` then `astro build`. Output goes to `dist/`.
+
+#### Preview production build
+```bash
+npm run preview
+```
