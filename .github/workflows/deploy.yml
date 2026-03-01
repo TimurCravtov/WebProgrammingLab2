@@ -28,7 +28,11 @@ jobs:
           cache: npm
       - uses: actions/configure-pages@v4
       - run: npm ci
+      # tinacms build generates the admin UI and __generated__ types.
+      # If Tina Cloud is not yet configured, this step is allowed to fail —
+      # the site still builds because index.astro reads content/pages/home.json directly.
       - run: npx tinacms build
+        continue-on-error: true
       - run: npx astro build
       - uses: actions/upload-pages-artifact@v3
         with:
