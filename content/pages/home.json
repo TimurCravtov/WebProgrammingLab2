@@ -1,67 +1,82 @@
 {
   "title": "Evelina :: the Artist",
-  "heroName": "Evelina",
-  "heroTagline": "The Authentic Artist from Moldova",
-  "heroDescription": "Evelina is a passionate and professional artist who brings her unique vision to every canvas. She captures the essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional artistry. All her paintings are oil on canvas\n",
-  "ctaText": "Order a painting or view more works",
-  "ctaLink": "https://www.instagram.com/eveline.art/",
-  "gallerySectionTitle": "Gallery",
-  "gallerySectionSubtitle": "A Spotlight on Evelina's Works",
-  "gallery": [
-    {
-      "src": "/pictures/flow.png",
-      "alt": "flow of the life",
-      "paintingTitle": "Flow of the Life",
-      "medium": "Oil on canvas"
-    },
-    {
-      "src": "/pictures/mountain.png",
-      "alt": "mountain landscape of Brasov",
-      "paintingTitle": "Mountain Landscape of Brașov",
-      "medium": "Oil on canvas"
-    },
-    {
-      "src": "/pictures/garden.png",
-      "alt": "evening in the garden",
-      "paintingTitle": "Evening in the Garden",
-      "medium": "Oil on canvas"
-    },
-    {
-      "src": "/pictures/kitten.png",
-      "alt": "kitten",
-      "paintingTitle": "Kitten",
-      "medium": "Oil on canvas"
-    },
-    {
-      "src": "/pictures/silence.png",
-      "alt": "inside the silence",
-      "paintingTitle": "Inside the Silence",
-      "medium": "Oil on canvas"
-    }
-  ],
-  "reviewsSectionTitle": "Reviews",
-  "reviews": [
-    {
-      "name": "John Popescu",
-      "text": "Evelina's art is truly captivating. Her use of color and texture creates a mesmerizing experience that transports you to another world."
-    },
-    {
-      "name": "Maria Ionescu",
-      "text": "I ordered a custom portrait and it exceeded all my expectations. The attention to detail and the way she captured the personality of the subject is remarkable."
-    },
-    {
-      "name": "Andrei Vasile",
-      "text": "The 'Flow of Life' piece I bought brings so much peace to my living room. Evelina is remarkably talented and professional."
-    }
-  ],
-  "contactSectionTitle": "Contact",
-  "contactDescription": "For collaborations or inquiries, feel free to reach out:",
-  "socialLinks": [
-    {
-      "label": "Instagram",
-      "url": "https://www.instagram.com/eveline.art/",
-      "icon": "/pictureshttps://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png"
-    }
-  ],
-  "mascotMessage": "Hi! You are a curious one, aren't you ? :)"
+  "hero": {
+    "enabled": true,
+    "heroName": "Evelina",
+    "heroTagline": "The Authentic Artist from Moldova",
+    "heroDescription": "Evelina is a passionate and professional artist who brings her unique vision to every canvas. She captures the essence of nature and human emotion in her paintings. Her experience include more than 6 years of professional artistry. All her paintings are oil on canvas.\n\nTest",
+    "ctaText": "Order a painting or view more works",
+    "ctaLink": "https://www.instagram.com/eveline.art/"
+  },
+  "gallery": {
+    "enabled": true,
+    "title": "Gallery",
+    "subtitle": "A Spotlight on Evelina's Works",
+    "items": [
+      {
+        "src": "/pictures/flow.png",
+        "alt": "flow of the life",
+        "paintingTitle": "Flow of the Life",
+        "medium": "Oil on canvas"
+      },
+      {
+        "src": "/pictures/mountain.png",
+        "alt": "mountain landscape of Brasov",
+        "paintingTitle": "Mountain Landscape of Brașov",
+        "medium": "Oil on canvas"
+      },
+      {
+        "src": "/pictures/garden.png",
+        "alt": "evening in the garden",
+        "paintingTitle": "Evening in the Garden",
+        "medium": "Oil on canvas"
+      },
+      {
+        "src": "/pictures/kitten.png",
+        "alt": "kitten",
+        "paintingTitle": "Kitten",
+        "medium": "Oil on canvas"
+      },
+      {
+        "src": "/pictures/silence.png",
+        "alt": "inside the silence",
+        "paintingTitle": "Inside the Silence",
+        "medium": "Oil on canvas"
+      }
+    ]
+  },
+  "reviews": {
+    "enabled": true,
+    "title": "Reviews",
+    "items": [
+      {
+        "name": "John Popescu",
+        "text": "Evelina's art is truly captivating. Her use of color and texture creates a mesmerizing experience that transports you to another world."
+      },
+      {
+        "name": "Maria Ionescu",
+        "text": "I ordered a custom portrait and it exceeded all my expectations. The attention to detail and the way she captured the personality of the subject is remarkable."
+      },
+      {
+        "name": "Andrei Vasile",
+        "text": "The 'Flow of Life' piece I bought brings so much peace to my living room. Evelina is remarkably talented and professional."
+      }
+    ]
+  },
+  "contact": {
+    "enabled": true,
+    "title": "Contact",
+    "description": "For collaborations or inquiries, feel free to reach out:",
+    "socialLinks": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/eveline.art/",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png"
+      }
+    ]
+  },
+  "mascot": {
+    "enabled": true,
+    "message": "Hi! You are curious one? :)"
+  }
 }
